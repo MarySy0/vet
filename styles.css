@@ -1,0 +1,357 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+  margin: 0;
+}
+h2 {
+  text-align: center; /* вирівнювання тексту по центру */
+}
+main {
+  flex: 1;
+}
+
+/* ----- Шапка ----- */
+.header {
+  background-color: #0078D7;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-top: 0.5rem;
+  gap: 1.83rem; /* відстань між елементами */
+}
+
+.nav li {
+  margin: 0 1rem;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none; /* прибираємо підкреслення */
+  font-weight: bold;
+  font-size: 1.5rem; /* твій вихідний розмір */
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #a9d1ff;
+  text-decoration: underline;
+}
+
+/* ----- Сітка ----- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  background-color:#e1f0ff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.tile {
+  background-color: #e1f0ff;
+}
+
+.tile-img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+/* ----- Сітка послуг ----- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  text-align: center;
+}
+.back-button {
+  grid-column: 1 / -1;
+  justify-self: center;
+  cursor: pointer;
+  width:140px;
+  height: calc(140px / 4);
+  background: #828383;
+  color: #fff;
+  border-radius: 6px;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-button:hover {
+  background: #235378;
+}
+.back-button-main {
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 1.5rem;
+  color: #710c70;
+  border-bottom: 3px solid #710c70;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  padding-bottom: 2px;
+}
+.service-card {
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h3 {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #0078D7;
+  cursor: pointer;
+}
+.service-link {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #0078D7;
+  text-decoration: none;
+  border-bottom: 3px solid #0078D7;
+  cursor: pointer;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.service-link:hover {
+  color: #005a9e;
+  border-color: #005a9e;
+}
+/* Послуги: заголовки карток */
+#services-grid .service-card h3 {
+  color: #000;
+  cursor: default;
+  pointer-events: none;
+}
+
+.more-button {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #0078D7;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.more-button:hover {
+  color: #005a9e;
+}
+
+/* ----- Форма ----- */
+form input,
+form button {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form input {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #0078D7;
+  background-color: #e6f0ff;
+}
+
+form button {
+  background-color: #0078D7;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #005a9e;
+}
+.form-message {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.form-message.error {
+  color: red;
+}
+
+.form-message.success {
+  color: green;
+}
+.map-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.map-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+/* ----- Приховані елементи ----- */
+.hidden {
+  display: none;
+}
+
+/* ----- Підвал ----- */
+.footer {
+  background-color: #0078D7;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-social img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: brightness(100%);
+}
+
+.footer-social a:hover img {
+  transform: scale(1.1);
+  filter: brightness(130%);
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.map-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #0066cc;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.map-link:hover {
+  color: #004999;
+}
+
+@keyframes scaleCard {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+/* Анімація збільшення */
+.card-animate {
+  animation: scaleCard 0.6s ease forwards;
+}
+
+.blink-animation {
+  animation: scaleBlinkVertical 1.2s ease forwards;
+  animation-iteration-count: 1;
+  transform-origin: center center;
+}
+
+/* ----- Медіазапити ----- */
+
+/* Планшети */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .nav {
+    gap: 1rem;
+  }
+
+  .nav a {
+    font-size: 1.1rem; /* менше ніж у базовому */
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Смартфони */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav a {
+    font-size: 1rem; /* зменшений розмір для мобільних */
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .back-button {
+    width: 100px;
+    height: 30px;
+  }
+}

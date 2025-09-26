@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" /> <!-- Вказуємо кодування сторінки -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Масштабування для мобільних -->
+  <title>Ветеринарна клініка</title> <!-- Заголовок вкладки браузера -->
+
+  <!-- Підключення зовнішнього CSS -->
+  <link rel="stylesheet" href="styles.css" />
+  
+</head>
+<body>
+  <!-- Шапка сайту -->
+  <header class="header">
+    <h1>Ветеринарна клініка</h1>
+    <!-- Навігаційне меню -->
+<ul class="nav">
+  <li><a href="#o-klinike">Про клініку</a></li>
+  <li><a href="#uslugi">Послуги</a></li>
+  <li><a href="#vrachi">Наші лікарі</a></li>
+  <li><a href="#zapis">Запис</a></li>
+  <li><a href="kontakty.html">Контакти</a></li>
+</ul>
+  </header>
+
+  <!-- Основний контент у вигляді сітки карток -->
+  <main class="grid">
+
+    <!-- Блок "Про клініку" -->
+   <section id="o-klinike" class="card">
+      <h2>Про клініку</h2>
+      <img src="assets/clinic-care.jpg" alt="Догляд за улюбленцем" class="tile-img" />
+      <p>
+         Наша клініка вперше відкрила свої двері для улюбленців у 2003 році.<br>
+        </p>
+<p class="more-text hidden">
+    Ми дбаємо про здоров’я ваших улюбленців та пропонуємо широкий спектр ветеринарних послуг.
+    Працюємо за міжнародними стандартами «Pet friendly» та «Fear Free veterinary clinic».
+    Спеціалісти нашої клініки – не лише першокласні лікарі, а й зоопсихологи –
+    вони не тільки проведуть точну діагностику та призначать ефективне лікування,
+    але й знайдуть підхід до будь-якої домашньої тварини.
+    Повний спектр ветеринарної допомоги 24/7.
+  </p>
+ <a href="#" class="more-button toggle-btn">Докладніше</a>
+    </section>
+
+    <!-- Блок "Послуги" -->
+   <section id="uslugi" class="card">
+      <h2>Послуги</h2>
+
+      <!-- Тригер-картка для розкриття списку послуг -->
+      <div id="service-trigger" class="service-card">
+        <img src="assets/uslugi.png" alt="Послуги клініки" class="tile-img" />
+        <h3>Переглянути послуги</h3>
+      </div>
+
+      <!-- Прихована сітка з рештою послуг -->
+      <div id="services-grid" class="services-grid hidden">
+        <div class="service-card">
+          <img src="assets/doctor-cat.jpg" alt="Вакцинація улюбленців" class="tile-img" />
+          <h3>Вакцинація</h3>
+        </div>
+        <div class="service-card">
+          <img src="assets/analiz.png" alt="Аналізи" class="tile-img" />
+          <h3>Аналізи</h3>
+        </div>
+        <div class="service-card">
+          <img src="assets/steril.png" alt="Стерилізація" class="tile-img" />
+          <h3>Стерилізація</h3>
+        </div>
+        <div class="service-card">
+          <img src="assets/rentgen.png" alt="Рентген" class="tile-img" />
+          <h3>Рентген</h3>
+        </div>
+        <div class="service-card">
+          <img src="assets/chip.png" alt="Чіпування" class="tile-img" />
+          <h3>Чіпування</h3>
+        </div>
+        <div class="service-card">
+          <img src="assets/osmotr.png" alt="Огляд та лікування" class="tile-img" />
+          <h3>Огляд і лікування</h3>
+        </div>
+          <!-- Кнопка "Назад" -->
+    <div id="service-back" class="back-button">
+      <h3>← Назад</h3>
+    </div>
+      </div>
+    </section>
+
+    <!-- Блок "Наші лікарі" -->
+<section id="vrachi" class="card">
+  <h2>Наші лікарі</h2>
+  <img src="assets/doctor-smile.jpg" alt="Наші ветеринари" class="tile-img" />
+  <p>
+    Наші лікарі мають високу кваліфікацію та багаторічний досвід у сфері ветеринарної медицини.
+  </p>
+
+  <p class="more-text hidden">
+    1. <strong>Іванова Олена Сергіївна</strong>, ветеринарний терапевт і хірург — здійснює діагностику та лікування внутрішніх захворювань, проводить хірургічні втручання із застосуванням сучасних анестезіологічних протоколів.<br><br>
+
+    2. <strong>Орлов Дмитро Вікторович</strong>, ветеринарний кардіолог — спеціалізується на профілактиці, діагностиці та лікуванні захворювань серцево-судинної системи у дрібних і великих тварин, застосовує ехокардіографію та лабораторні методи дослідження.<br><br>
+
+    3. <strong>Морозова Анна Володимирівна</strong>, ветеринарний стоматолог — проводить комплексне обстеження та лікування стоматологічних патологій, включаючи професійну гігієну ротової порожнини, терапевтичне та хірургічне втручання.<br><br>
+
+    4. <strong>Коваленко Андрій Петрович</strong>, спеціаліст з інфекційних захворювань і вакцинації — здійснює імунізацію, профілактику та лікування інфекційних захворювань із використанням сучасних вакцин і протоколів біобезпеки.<br><br>
+
+    5. <strong>Соколова Марія Олексіївна</strong>, ветеринарний зоопсихолог і терапевт — застосовує поведінкові та когнітивні методи для адаптації тварин до стресових ситуацій, поліпшення їхнього емоційного стану та профілактики поведінкових порушень.
+  </p>
+
+  <a href="#" class="more-button toggle-btn">Докладніше</a>
+</section>
+
+    <!-- Блок "Запис на прийом" -->
+    <section id="zapis" class="card">
+      <h2>Запис на прийом</h2>
+      <img src="assets/doctor-dog.png" alt="Лікар записує прийом" class="tile-img" />
+      <!-- Форма запису -->
+      <form id="appointmentForm">
+        <input type="text" name="name" placeholder="Ваше ім’я" required />
+        <input type="tel" name="phone" placeholder="Телефон" required />
+       <input type="date" name="date" id="dateInput" required />
+        <button type="submit">Записатися</button>
+      </form>
+      <!-- Повідомлення про помилки -->
+  <div id="formMessage" class="form-message"></div>
+    </section>
+
+    <!-- Блок "Контакти" -->
+   <section class="card tile" id="contacts">
+      <h2>Контакти</h2>
+      <img src="assets/doctor-welpe.jpg" alt="Ветеринар з кошеням" class="tile-img" />
+      <p>Телефони:<br>+380 (57) 123-45-67<br> +38 (093) 043-10-17<br>
+
++38 (067) 648-93-57</p>
+      <p>Email: info@vetclinic.kh.ua</p>
+      <p>Адреса: вулиця 23-го Серпня, 59, Харків, Україна</p>
+      <!-- Карта Google: вул. 23-го Серпня, 59, Харків -->
+  <!-- Кнопка -->
+ <p>
+    <a href="kontakty-map.html" class="map-link">Переглянути на карті</a>
+  </p>
+    </section>
+  </main>
+
+  <!-- Підключення JS -->
+<script src="script.js"></script>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <!-- Соцмережі -->
+    <div class="footer-social">
+      <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+        <img src="assets/icon-instagram.svg" alt="Instagram" />
+      </a>
+      <a href="https://telegram.org" target="_blank" aria-label="Telegram">
+        <img src="assets/icon-telegram.svg" alt="Telegram" />
+      </a>
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+        <img src="assets/icon-facebook.svg" alt="Facebook" />
+      </a>
+    </div>
+
+    <!-- Копірайт -->
+    <p class="footer-copy">© 2025 Ветеринарна клініка. Усі права захищені.</p>
+  </footer>
+</body>
+</html>

@@ -52,7 +52,7 @@ main {
   text-decoration: underline;
 }
 
-/* ----- Сітка ---
+/* ----- Сітка ----- */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -82,7 +82,7 @@ main {
   border-radius: 4px;
   margin-bottom: 0.5rem;
 }
--- */
+
 /* ----- Сітка послуг ----- */
 .services-grid {
   display: grid;

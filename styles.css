@@ -2,18 +2,11 @@ html, body {
   height: 100%;
 }
 
-.raleway-body {
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: bold;
-  font-style: normal;
-}
-
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f2f2f2;
   color: #333;
   margin: 0;

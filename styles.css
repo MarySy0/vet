@@ -110,7 +110,7 @@ h2 {
   display: block;
 }
 
-.input {
+ form input {
   display: block;
   margin: 0 auto 10px auto;
   padding: 8px;

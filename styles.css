@@ -1,21 +1,24 @@
-html, body {
-  height: 100%;
+html {
+  height: 100vh;
+}
+/* Для всего документа */
+html,
+body {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE/Edge */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+/* Скрытие полосы в WebKit (Chrome, Safari, Opera) */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f2f2f2;
-  color: #333;
-  margin: 0;
-}
 h2 {
-  text-align: center; /* вирівнювання тексту по центру */
-}
-main {
-  flex: 1;
+  text-align: center;
 }
 
 /* ----- Шапка ----- */
@@ -32,7 +35,8 @@ main {
   justify-content: center;
   padding: 0;
   margin-top: 0.5rem;
-  gap: 1.83rem; /* відстань між елементами */
+  gap: 1.83rem;
+  /* відстань між елементами */
 }
 
 .nav li {
@@ -41,9 +45,11 @@ main {
 
 .nav a {
   color: white;
-  text-decoration: none; /* прибираємо підкреслення */
+  text-decoration: none;
+  /* прибираємо підкреслення */
   font-weight: bold;
-  font-size: 1.5rem; /* твій вихідний розмір */
+  font-size: 1.5rem;
+  /* твій вихідний розмір */
   transition: color 0.3s ease;
 }
 
@@ -61,15 +67,16 @@ main {
 }
 
 .card {
-  background-color:#e1f0ff;
+  max-width: 100%;
+  background-color: #e1f0ff;
   border-radius: 8px;
   padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .tile {
@@ -78,9 +85,25 @@ main {
 
 .tile-img {
   width: 100%;
-  height: auto;
+  height: 160px;
   border-radius: 4px;
   margin-bottom: 0.5rem;
+}
+
+.appointment-form {
+  max-width: 100%;
+  margin: 8% auto 15px auto;
+  display: block;
+}
+
+.input {
+  display: block;
+  margin: 0 auto 10px auto;
+  padding: 8px;
+  width: 90%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
 }
 
 /* ----- Сітка послуг ----- */
@@ -90,11 +113,12 @@ main {
   gap: 1rem;
   text-align: center;
 }
+
 .back-button {
   grid-column: 1 / -1;
   justify-self: center;
   cursor: pointer;
-  width:140px;
+  width: 140px;
   height: calc(140px / 4);
   background: #828383;
   color: #fff;
@@ -108,6 +132,7 @@ main {
 .back-button:hover {
   background: #235378;
 }
+
 .back-button-main {
   display: inline-block;
   margin-top: 30px;
@@ -119,11 +144,12 @@ main {
   text-align: center;
   padding-bottom: 2px;
 }
+
 .service-card {
   background-color: #fff;
   border-radius: 6px;
   padding: 0.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.2s ease;
 }
@@ -138,6 +164,7 @@ main {
   color: #0078D7;
   cursor: pointer;
 }
+
 .service-link {
   display: inline-block;
   margin-top: 15px;
@@ -154,6 +181,7 @@ main {
   color: #005a9e;
   border-color: #005a9e;
 }
+
 /* Послуги: заголовки карток */
 #services-grid .service-card h3 {
   color: #000;
@@ -177,33 +205,26 @@ main {
 }
 
 /* ----- Форма ----- */
-form input,
-form button {
-  display: block;
-  margin: 0 auto;
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-form input {
-  background-color: #f7f7f7;
-  width: 93%;
-  border: 1px solid #ccc;
-}
 
 form input:focus {
   outline: none;
   border-color: #0078D7;
   background-color: #e6f0ff;
 }
-
 form button {
+  display: block;
+  margin: 0 auto;
+  padding: 4px;
+  width: 97%;
+  margin-bottom: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-size: 1rem;
+
   background-color: #0078D7;
   color: white;
-  width: 100%;
+ 
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -212,6 +233,7 @@ form button {
 form button:hover {
   background-color: #005a9e;
 }
+
 .form-message {
   margin-top: 10px;
   font-size: 14px;
@@ -224,6 +246,7 @@ form button:hover {
 .form-message.success {
   color: green;
 }
+
 .map-wrap {
   position: relative;
   width: 100%;
@@ -240,6 +263,7 @@ form button:hover {
   height: 100%;
   border: 0;
 }
+
 /* ----- Приховані елементи ----- */
 .hidden {
   display: none;
@@ -293,10 +317,19 @@ form button:hover {
 }
 
 @keyframes scaleCard {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.08); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
+
 /* Анімація збільшення */
 .card-animate {
   animation: scaleCard 0.6s ease forwards;
@@ -311,9 +344,9 @@ form button:hover {
 /* ----- Медіазапити ----- */
 
 /* Планшети */
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 
   .nav {
@@ -321,14 +354,18 @@ form button:hover {
   }
 
   .nav a {
-    font-size: 1.1rem; /* менше ніж у базовому */
+    font-size: 1.1rem;
+    /* менше ніж у базовому */
   }
 
   h2 {
-    font-size: 1.4rem;
+    font-size: 18px;
   }
 }
-
+@media (max-width: 900px){
+.tile-img{
+  height: 230px;}
+}
 /* Смартфони */
 @media (max-width: 768px) {
   .grid {
@@ -341,7 +378,8 @@ form button:hover {
   }
 
   .nav a {
-    font-size: 1rem; /* зменшений розмір для мобільних */
+    font-size: 1rem;
+    /* зменшений розмір для мобільних */
   }
 
   h2 {
@@ -356,4 +394,11 @@ form button:hover {
     width: 100px;
     height: 30px;
   }
+    form button {
+    width: 93%;    
+  }
+     .tile-img {
+       height: auto;
+       ;
+     }
 }

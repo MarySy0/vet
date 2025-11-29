@@ -1,3 +1,4 @@
+
 html {
   height: 100vh;
 }
@@ -243,6 +244,7 @@ form input:focus {
   border-color: #0078D7;
   background-color: #e6f0ff;
 }
+
 form button {
   display: block;
   margin: 0 auto;
